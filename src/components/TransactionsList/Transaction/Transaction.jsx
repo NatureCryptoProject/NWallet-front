@@ -11,6 +11,10 @@ const Transaction = ({
   date,
 }) => {
   const formatedAmount = Number(amount).toFixed(6);
+  if (date > 10_000_000_000) {
+    date = Math.round(date / 10);
+  }
+  console.log(date);
   const handleDirectionStringFormat = (adress) => {
     let formatedAdress = adress.split("");
     formatedAdress.splice(15, 45, "...");
