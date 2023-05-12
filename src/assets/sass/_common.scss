@@ -1,0 +1,55 @@
+@import "../../assets/sass/mixins.scss";
+// * {
+//   outline: 1px solid red;
+// }
+
+.root {
+  position: relative;
+}
+
+html,
+body {
+  height: 100vh;
+  position: relative;
+  font-family: "Bahnschrift", sans-serif;
+  @include regularFont();
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--primary-bg-color);
+  overflow: hidden;
+  // overflow-y: hidden;
+  // overflow-x: visible;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li {
+  margin: 0;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+}

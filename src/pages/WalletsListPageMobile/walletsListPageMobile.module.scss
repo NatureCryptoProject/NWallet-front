@@ -1,0 +1,76 @@
+@import "../../assets/sass/mixins";
+
+.section {
+  height: calc(100vh - calc((30 / 460) * 100vw));
+  overflow: auto;
+  &::-webkit-scrollbar {
+    width: calc((10 / 1440) * 100vw);
+    background-color: #267164;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: calc((10 / 1440) * 100vw);
+  }
+}
+
+.leftPanel {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: calc((30 / 460) * 100vw);
+  width: calc((420 / 460) * 100vw);
+  height: calc((270 / 460) * 100vw);
+  // max-width: 420px;
+  border-radius: calc((10 / 460) * 100vw);
+  // height: 270px;
+  //   position: absolute;
+  //   top: 110px;
+  //   left: 0;
+  //   width: 400px;
+  background-image: var(--left-panel-bg-color);
+}
+
+.headerButton {
+  margin-left: auto;
+  margin-right: auto;
+  // margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc((250 / 460) * 100vw);
+  height: calc((86 / 460) * 100vw);
+  border: calc((2 / 460) * 100vw) solid #46baa4;
+  box-shadow: 0px calc((4 / 460) * 100vw) calc((5 / 460) * 100vw)
+    calc((5 / 460) * 100vw) rgba(0, 0, 0, 0.25);
+  border-radius: calc((15 / 460) * 100vw);
+  background-color: transparent;
+  font-weight: 700;
+  font-size: calc((35 / 460) * 100vw);
+  line-height: 1.2;
+  color: var(--primary-text-color);
+  &:first-child {
+    margin-bottom: calc((20 / 460) * 100vw);
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.buttonsWrapper {
+  margin-left: auto;
+  margin-right: auto;
+  // position: absolute;
+  margin-top: calc((30 / 460) * 100vw);
+  margin-bottom: calc((50 / 460) * 100vw);
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0px calc((4 / 460) * 100vw) calc((4 / 460) * 100vw)
+    rgba(0, 0, 0, 0.25);
+  border-radius: calc((10 / 460) * 100vw);
+  padding-top: calc((19 / 460) * 100vw);
+  padding-bottom: calc((24 / 460) * 100vw);
+  width: calc((420 / 460) * 100vw);
+}

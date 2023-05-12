@@ -1,0 +1,15 @@
+.section {
+  height: calc(100vh - calc((80 / 460) * 100vw));
+  //   height: 100%;
+  padding-bottom: calc((30 / 460) * 100vw);
+  overflow: auto;
+  &::-webkit-scrollbar {
+    width: calc((10 / 1440) * 100vw);
+    background-color: #267164;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: calc((10 / 1440) * 100vw);
+  }
+}

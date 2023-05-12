@@ -1,0 +1,234 @@
+@import "../../assets/sass/mixins";
+
+.rightPanel {
+  position: relative;
+  width: calc((800 / 1440) * 100vw);
+  background-image: var(--secondary-bg-color);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: calc((50 / 1440) * 100vw);
+  border-radius: calc((10 / 1440) * 100vw);
+  &Sided {
+    width: calc((800 / 1440) * 100vw);
+    background-image: var(--secondary-bg-color);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: calc((50 / 1440) * 100vw);
+    border-radius: calc((10 / 1440) * 100vw);
+    transform: translateX(calc((220 / 1440) * 100vw));
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: var(--time-function);
+    // @include mq(tablet-only) {
+    //   transform: translateX(0px);
+    // }
+    @include mq(mobile-only) {
+      width: calc((420 / 460) * 100vw);
+      transform: translateX(0px);
+    }
+  }
+
+  // @include mq(mobile-only) {
+  //   max-width: 420px;
+  //   margin-top: 30px;
+  // }
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: var(--time-function);
+  @include mq(mobile-only) {
+    width: calc((420 / 460) * 100vw);
+    margin-top: calc((30 / 460) * 100vw);
+    border-radius: calc((10 / 460) * 100vw);
+  }
+}
+
+.walletIcoWrapper {
+  margin-left: calc((12 / 1440) * 100vw);
+  width: calc((45 / 1440) * 100vw);
+  height: calc((45 / 1440) * 100vw);
+  @include mq(mobile-only) {
+    width: calc((45 / 460) * 100vw);
+    height: calc((45 / 460) * 100vw);
+  }
+}
+
+.walletIco {
+  width: calc((45 / 1440) * 100vw);
+  height: calc((45 / 1440) * 100vw);
+  @include mq(mobile-only) {
+    width: calc((45 / 460) * 100vw);
+    height: calc((45 / 460) * 100vw);
+  }
+}
+
+.RefreshIco {
+  cursor: pointer;
+  position: absolute;
+  right: calc((24 / 1440) * 100vw);
+  width: calc((50 / 1440) * 100vw);
+  height: calc((50 / 1440) * 100vw);
+
+  @include mq(mobile-only) {
+    right: calc((10 / 460) * 100vw);
+    width: calc((50 / 460) * 100vw);
+    height: calc((50 / 460) * 100vw);
+  }
+}
+
+.DeleteIcon {
+  cursor: pointer;
+  position: absolute;
+  left: calc((24 / 1440) * 100vw);
+  width: calc((50 / 1440) * 100vw);
+  height: calc((50 / 1440) * 100vw);
+
+  @include mq(mobile-only) {
+    display: none;
+    width: calc((50 / 460) * 100vw);
+    height: calc((50 / 460) * 100vw);
+  }
+}
+
+.headingWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: calc((26 / 1440) * 100vw);
+  padding-bottom: calc((30 / 1440) * 100vw);
+  @include mq(mobile-only) {
+    padding-top: calc((20 / 460) * 100vw);
+    padding-bottom: calc((30 / 460) * 100vw);
+  }
+}
+
+.rightPanelHeading {
+  @include boldFont();
+  font-size: calc((32 / 1440) * 100vw);
+  margin-left: calc((5 / 1440) * 100vw);
+  color: var(--primary-text-color);
+  @include mq(mobile-only) {
+    font-size: calc((32 / 460) * 100vw);
+    margin-left: calc((5 / 460) * 100vw);
+  }
+}
+
+.walletBalaneWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: calc((20 / 1440) * 100vw);
+  padding-bottom: calc((20 / 1440) * 100vw);
+  padding-right: calc((20 / 1440) * 100vw);
+  padding-left: calc((20 / 1440) * 100vw);
+  border-top: calc((2 / 1440) * 100vw) solid white;
+  border-bottom: calc((2 / 1440) * 100vw) solid white;
+
+  @include mq(mobile-only) {
+    padding-top: calc((20 / 460) * 100vw);
+    padding-bottom: calc((20 / 460) * 100vw);
+    padding-right: calc((20 / 460) * 100vw);
+    padding-left: calc((20 / 460) * 100vw);
+    border-top: calc((2 / 460) * 100vw) solid white;
+    border-bottom: calc((2 / 460) * 100vw) solid white;
+  }
+}
+
+.walletBalaneHeading {
+  @include regularFont();
+  font-size: calc((32 / 1440) * 100vw);
+  color: var(--primary-text-color);
+  @include mq(mobile-only) {
+    font-size: calc((20 / 460) * 100vw);
+  }
+}
+
+.walletBalane {
+  @include regularFont();
+  font-size: calc((32 / 1440) * 100vw);
+  color: var(--primary-text-color);
+  @include mq(mobile-only) {
+    font-size: calc((20 / 460) * 100vw);
+  }
+}
+
+.buttonsWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: calc((63 / 1440) * 100vw);
+  padding-bottom: calc((73 / 1440) * 100vw);
+  padding-right: calc((200 / 1440) * 100vw);
+  padding-left: calc((200 / 1440) * 100vw);
+  @include mq(mobile-only) {
+    padding: calc((45 / 460) * 100vw) calc((62 / 460) * 100vw);
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: transparent;
+  border-radius: 100%;
+  background-color: transparent;
+
+  &:hover {
+    cursor: pointer;
+    background-color: black;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @include mq(mobile-only) {
+    width: calc((90 / 460) * 100vw);
+    height: calc((90 / 460) * 100vw);
+
+    & img {
+      width: calc((90 / 460) * 100vw);
+      height: calc((90 / 460) * 100vw);
+    }
+  }
+}
+
+.buttonImg {
+  width: calc((115 / 1440) * 100vw);
+  height: calc((115 / 1440) * 100vw);
+}
+
+.arrowLeftIcon {
+  display: none;
+  @include mq(mobile-only) {
+    width: calc((40 / 460) * 100vw);
+    height: calc((40 / 460) * 100vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: transparent;
+    position: absolute;
+    top: calc((10 / 460) * 100vw);
+    left: calc((10 / 460) * 100vw);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.homeIcon {
+  width: calc((50 / 1440) * 100vw);
+  height: calc((50 / 1440) * 100vw);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: transparent;
+  position: absolute;
+  top: calc((15 / 1440) * 100vw);
+  right: calc((15 / 1440) * 100vw);
+
+  &:hover {
+    cursor: pointer;
+  }
+}

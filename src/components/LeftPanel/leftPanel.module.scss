@@ -1,0 +1,28 @@
+@import "../../assets/sass/mixins";
+
+.leftPanel {
+  z-index: 2;
+  position: absolute;
+  top: calc((110 / 1440) * 100vw);
+  left: 0;
+  width: calc((400 / 1440) * 100vw);
+  background-image: var(--left-panel-bg-color);
+  height: calc(100vh - calc((110 / 1440) * 100vw));
+
+  &Hidden {
+    position: absolute;
+    top: calc((110 / 1440) * 100vw);
+    left: 0;
+    width: calc((400 / 1440) * 100vw);
+    background-image: var(--left-panel-bg-color);
+    height: calc(100% - calc((110 / 1440) * 100vw));
+    transform: translateX(-100%);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: var(--time-function);
+  }
+
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: var(--time-function);
+}

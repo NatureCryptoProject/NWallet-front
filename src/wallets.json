@@ -1,0 +1,430 @@
+[
+  {
+    "_id": "1",
+    "walletName": "Wallet1",
+    "walletAdress": "testAdressDylanWallet1",
+    "walletPassword": "testPassword",
+    "mnemonic": "There must be some words I guess",
+    "amount": 10000.00001,
+    "transactions": [
+      {
+        "transactionAdress": "testAdress2",
+        "transactionAmount": 1000,
+        "_id": {
+          "$oid": "63922c7a3ab74a5fc40aac6a"
+        }
+      },
+      {
+        "transactionAdress": "testAdress3",
+        "transactionAmount": 100,
+        "_id": {
+          "$oid": "63922c7a3ab74a5fc40aac6b"
+        }
+      },
+      {
+        "transactionAdress": "testAdress3",
+        "transactionAmount": -100.001,
+        "_id": {
+          "$oid": "63922c7a3ab74a5fc40aac6c"
+        }
+      },
+      {
+        "transactionAdress": "testAdress3",
+        "transactionAmount": -100,
+        "_id": {
+          "$oid": "63922c7a3ab74a5fc40aac6d"
+        }
+      },
+      {
+        "transactionAdress": "testAdress3",
+        "transactionAmount": -100.001,
+        "_id": {
+          "$oid": "63922c7a3ab74a5fc40aac6e"
+        }
+      }
+    ],
+    "owner": {
+      "$oid": "63922b434945faae5de5223c"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1670524026788"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1670524026788"
+      }
+    }
+  },
+  {
+    "_id": "2",
+    "walletName": "Wallet2",
+    "walletAdress": "testAdressDylanWallet2",
+    "walletPassword": "testPassword",
+    "mnemonic": "There must be some words I guess",
+    "amount": 0.584857,
+    "transactions": [
+      {
+        "transactionAdress": "testAdress2",
+        "transactionAmount": 0.106,
+        "_id": {
+          "$oid": "63922cc83ab74a5fc40aac71"
+        }
+      },
+      {
+        "transactionAdress": "testAdress3",
+        "transactionAmount": 0.98,
+        "_id": {
+          "$oid": "63922cc83ab74a5fc40aac72"
+        }
+      },
+      {
+        "transactionAdress": "testAdress3",
+        "transactionAmount": -0.44333,
+        "_id": {
+          "$oid": "63922cc83ab74a5fc40aac73"
+        }
+      },
+      {
+        "transactionAdress": "testAdress3",
+        "transactionAmount": -16456,
+        "_id": {
+          "$oid": "63922cc83ab74a5fc40aac74"
+        }
+      },
+      {
+        "transactionAdress": "testAdress3",
+        "transactionAmount": -0.5949386839582186,
+        "_id": {
+          "$oid": "63922cc83ab74a5fc40aac75"
+        }
+      }
+    ],
+    "owner": {
+      "$oid": "63922b434945faae5de5223c"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1670524104246"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1670524104246"
+      }
+    }
+  },
+  {
+    "_id": "3",
+    "walletName": "Wallet3",
+    "walletAdress": "testAdressDylanWallet3",
+    "walletPassword": "testPassword",
+    "mnemonic": "There must be some words I guess",
+    "amount": 0.584857,
+    "transactions": [
+      {
+        "transactionAdress": "testAdress2",
+        "transactionAmount": 0.106,
+        "_id": {
+          "$oid": "63922ce83ab74a5fc40aac78"
+        }
+      },
+      {
+        "transactionAdress": "testAdress3",
+        "transactionAmount": 0.98,
+        "_id": {
+          "$oid": "63922ce83ab74a5fc40aac79"
+        }
+      },
+      {
+        "transactionAdress": "testAdress3",
+        "transactionAmount": -0.44333,
+        "_id": {
+          "$oid": "63922ce83ab74a5fc40aac7a"
+        }
+      },
+      {
+        "transactionAdress": "testAdress3",
+        "transactionAmount": -16456,
+        "_id": {
+          "$oid": "63922ce83ab74a5fc40aac7b"
+        }
+      },
+      {
+        "transactionAdress": "testAdress3",
+        "transactionAmount": -0.5949386839582186,
+        "_id": {
+          "$oid": "63922ce83ab74a5fc40aac7c"
+        }
+      }
+    ],
+    "owner": {
+      "$oid": "63922b434945faae5de5223c"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1670524136259"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1670524136259"
+      }
+    }
+  },
+  {
+    "_id": "4",
+    "walletName": "Wallet4",
+    "walletAdress": "testAdressDylanWallet4",
+    "walletPassword": "testPassword",
+    "mnemonic": "There must be some words I guess",
+    "amount": 0.584857,
+    "transactions": [
+      {
+        "transactionAdress": "testAdress2",
+        "transactionAmount": 0.106,
+        "_id": {
+          "$oid": "63922cee3ab74a5fc40aac7f"
+        }
+      },
+      {
+        "transactionAdress": "testAdress3",
+        "transactionAmount": 0.98,
+        "_id": {
+          "$oid": "63922cee3ab74a5fc40aac80"
+        }
+      },
+      {
+        "transactionAdress": "testAdress3",
+        "transactionAmount": -0.44333,
+        "_id": {
+          "$oid": "63922cee3ab74a5fc40aac81"
+        }
+      },
+      {
+        "transactionAdress": "testAdress3",
+        "transactionAmount": -16456,
+        "_id": {
+          "$oid": "63922cee3ab74a5fc40aac82"
+        }
+      },
+      {
+        "transactionAdress": "testAdress3",
+        "transactionAmount": -0.5949386839582186,
+        "_id": {
+          "$oid": "63922cee3ab74a5fc40aac83"
+        }
+      }
+    ],
+    "owner": {
+      "$oid": "63922b434945faae5de5223c"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1670524142097"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1670524142097"
+      }
+    }
+  },
+  {
+    "_id": "5",
+    "walletName": "Wallet5",
+    "walletAdress": "testAdressDylanWallet5",
+    "walletPassword": "testPassword",
+    "mnemonic": "There must be some words I guess",
+    "amount": 0.584857,
+    "transactions": [
+      {
+        "transactionAdress": "testAdress2",
+        "transactionAmount": 0.106,
+        "_id": {
+          "$oid": "63922cf43ab74a5fc40aac86"
+        }
+      },
+      {
+        "transactionAdress": "testAdress3",
+        "transactionAmount": 0.98,
+        "_id": {
+          "$oid": "63922cf43ab74a5fc40aac87"
+        }
+      },
+      {
+        "transactionAdress": "testAdress3",
+        "transactionAmount": -0.44333,
+        "_id": {
+          "$oid": "63922cf43ab74a5fc40aac88"
+        }
+      },
+      {
+        "transactionAdress": "testAdress3",
+        "transactionAmount": -16456,
+        "_id": {
+          "$oid": "63922cf43ab74a5fc40aac89"
+        }
+      },
+      {
+        "transactionAdress": "testAdress3",
+        "transactionAmount": -0.5949386839582186,
+        "_id": {
+          "$oid": "63922cf43ab74a5fc40aac8a"
+        }
+      }
+    ],
+    "owner": {
+      "$oid": "63922b434945faae5de5223c"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1670524148283"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1670524148283"
+      }
+    }
+  },
+  {
+    "_id": "6",
+    "walletName": "Wallet1",
+    "walletAdress": "testAdressDylan1Wallet1",
+    "walletPassword": "testPassword",
+    "mnemonic": "There must be some words I guess",
+    "amount": 100,
+    "transactions": [
+      {
+        "transactionAdress": "testAdress2",
+        "transactionAmount": 100,
+        "_id": {
+          "$oid": "63922d493ab74a5fc40aac90"
+        }
+      },
+      {
+        "transactionAdress": "testAdress3",
+        "transactionAmount": 200,
+        "_id": {
+          "$oid": "63922d493ab74a5fc40aac91"
+        }
+      },
+      {
+        "transactionAdress": "testAdress3",
+        "transactionAmount": -100,
+        "_id": {
+          "$oid": "63922d493ab74a5fc40aac92"
+        }
+      },
+      {
+        "transactionAdress": "testAdress3",
+        "transactionAmount": -200,
+        "_id": {
+          "$oid": "63922d493ab74a5fc40aac93"
+        }
+      },
+      {
+        "transactionAdress": "testAdress3",
+        "transactionAmount": -0.6,
+        "_id": {
+          "$oid": "63922d493ab74a5fc40aac94"
+        }
+      }
+    ],
+    "owner": {
+      "$oid": "639165e030aa2246358669fc"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1670524233068"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1670524233068"
+      }
+    }
+  },
+  {
+    "_id": "7",
+    "walletName": "Wallet2",
+    "walletAdress": "testAdressDylan1Wallet2",
+    "walletPassword": "testPassword",
+    "mnemonic": "There must be some words I guess",
+    "amount": 10065,
+    "transactions": [
+      {
+        "transactionAdress": "testAdress2",
+        "transactionAmount": 10065,
+        "_id": {
+          "$oid": "63922d953ab74a5fc40aac97"
+        }
+      },
+      {
+        "transactionAdress": "testAdress3",
+        "transactionAmount": 26500,
+        "_id": {
+          "$oid": "63922d953ab74a5fc40aac98"
+        }
+      },
+      {
+        "transactionAdress": "testAdress3",
+        "transactionAmount": -13200,
+        "_id": {
+          "$oid": "63922d953ab74a5fc40aac99"
+        }
+      },
+      {
+        "transactionAdress": "testAdress3",
+        "transactionAmount": -33200,
+        "_id": {
+          "$oid": "63922d953ab74a5fc40aac9a"
+        }
+      },
+      {
+        "transactionAdress": "testAdress3",
+        "transactionAmount": -0.6467,
+        "_id": {
+          "$oid": "63922d953ab74a5fc40aac9b"
+        }
+      }
+    ],
+    "owner": {
+      "$oid": "639165e030aa2246358669fc"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1670524309711"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1670524309711"
+      }
+    }
+  },
+  {
+    "_id": "8",
+    "walletName": "Wallet3",
+    "walletAdress": "testAdressDylan1Wallet3",
+    "walletPassword": "testPassword",
+    "mnemonic": "There must be some words I guess",
+    "amount": 10065,
+    "transactions": [],
+    "owner": {
+      "$oid": "639165e030aa2246358669fc"
+    },
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1670524331325"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1670524331325"
+      }
+    }
+  }
+]

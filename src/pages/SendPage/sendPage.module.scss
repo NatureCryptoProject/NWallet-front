@@ -1,0 +1,309 @@
+@import "../../assets/sass/mixins";
+
+.section {
+  display: flex;
+  justify-content: center;
+  padding: calc((30 / 1440) * 100vw) 0 calc((110 / 1440) * 100vw) 0;
+  height: calc(100vh - calc((30 / 1440) * 100vw));
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: calc((10 / 1440) * 100vw);
+    background-color: #267164;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: calc((10 / 1440) * 100vw);
+  }
+  @include mq(mobile-only) {
+    padding: calc((35 / 460) * 100vw) 0 calc((40 / 460) * 100vw) 0;
+  }
+}
+
+.modalWrapper {
+  position: relative;
+  width: calc((520 / 1440) * 100vw);
+  height: calc((460 / 1440) * 100vw);
+  background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.45) 100%);
+  border-radius: calc((10 / 1440) * 100vw);
+  padding-top: calc((95 / 1440) * 100vw);
+  padding-bottom: calc((45 / 1440) * 100vw);
+  padding-right: calc((10 / 1440) * 100vw);
+  padding-left: calc((60 / 1440) * 100vw);
+  @include mq(mobile-only) {
+    height: calc((440 / 460) * 100vw);
+    padding-top: calc((100 / 460) * 100vw);
+    padding-bottom: calc((30 / 460) * 100vw);
+    padding-right: calc((10 / 460) * 100vw);
+    padding-left: calc((10 / 460) * 100vw);
+    width: calc((380 / 460) * 100vw);
+    border-radius: calc((10 / 460) * 100vw);
+    // max-height: 98vh;
+  }
+}
+
+.arrowLeftIcon {
+  width: calc((50 / 1440) * 100vw);
+  height: calc((50 / 1440) * 100vw);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: transparent;
+  position: absolute;
+  top: calc((15 / 1440) * 100vw);
+  left: calc((15 / 1440) * 100vw);
+
+  &:hover {
+    cursor: pointer;
+  }
+  @include mq(mobile-only) {
+    width: calc((50 / 460) * 100vw);
+    height: calc((50 / 460) * 100vw);
+    top: calc((15 / 460) * 100vw);
+    left: calc((15 / 460) * 100vw);
+  }
+
+  .svg {
+    width: calc((50 / 460) * 100vw);
+    height: calc((50 / 460) * 100vw);
+    top: calc((15 / 460) * 100vw);
+    left: calc((15 / 460) * 100vw);
+  }
+}
+
+.homeIcon {
+  width: calc((50 / 1440) * 100vw);
+  height: calc((50 / 1440) * 100vw);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: transparent;
+  position: absolute;
+  top: calc((15 / 1440) * 100vw);
+  right: calc((15 / 1440) * 100vw);
+
+  &:hover {
+    cursor: pointer;
+  }
+  @include mq(mobile-only) {
+    width: calc((50 / 460) * 100vw);
+    height: calc((50 / 460) * 100vw);
+    top: calc((15 / 460) * 100vw);
+    right: calc((15 / 460) * 100vw);
+  }
+
+  .svg {
+    width: calc((50 / 460) * 100vw);
+    height: calc((50 / 460) * 100vw);
+    top: calc((15 / 460) * 100vw);
+    left: calc((15 / 460) * 100vw);
+  }
+}
+
+.formWrapper {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: calc((420 / 1440) * 100vw);
+  flex-direction: column;
+  align-items: center;
+
+  @include mq(mobile-only) {
+    width: calc((280 / 460) * 100vw);
+  }
+}
+
+.form {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+}
+
+.formField {
+  //   text-align: center;
+  width: calc((400 / 1440) * 100vw);
+  height: calc((60 / 1440) * 100vw);
+  background: #081815;
+  border-radius: calc((10 / 1440) * 100vw);
+  border: calc((1 / 1440) * 100vw) solid #47bea7;
+  padding-top: calc((15 / 1440) * 100vw);
+  padding-bottom: calc((15 / 1440) * 100vw);
+  padding-right: calc((60 / 1440) * 100vw);
+  padding-left: calc((15 / 1440) * 100vw);
+  margin-bottom: calc((20 / 1440) * 100vw);
+
+  @include regularFont();
+  font-size: calc((25 / 1440) * 100vw);
+
+  color: white;
+  @include mq(mobile-only) {
+    border-radius: calc((10 / 460) * 100vw);
+    width: calc((260 / 460) * 100vw);
+    height: calc((42 / 460) * 100vw);
+    @include regularFont();
+    font-size: calc((18 / 460) * 100vw);
+    margin-bottom: calc((30 / 460) * 100vw);
+  }
+  &:-webkit-autofill {
+    -webkit-box-shadow: inset 0 0 0 calc((50 / 1440) * 100vw) #081815;
+    -webkit-text-fill-color: white;
+  }
+
+  &::placeholder {
+    font-size: calc((18 / 1440) * 100vw);
+    @include mq(mobile-only) {
+      font-size: calc((18 / 460) * 100vw);
+    }
+  }
+}
+
+.formFieldLabel {
+  @include boldFont();
+  font-size: calc((35 / 1440) * 100vw);
+  position: relative;
+  color: white;
+  text-align: center;
+  @include mq(mobile-only) {
+    font-size: calc((20 / 1440) * 100vw);
+  }
+}
+
+.scannerButton {
+  width: calc((45 / 1440) * 100vw);
+  height: calc((45 / 1440) * 100vw);
+  position: absolute;
+  top: calc((8 / 1440) * 100vw);
+  right: calc((11 / 1440) * 100vw);
+  width: calc((45 / 1440) * 100vw);
+  height: calc((45 / 1440) * 100vw);
+  padding: 0;
+  margin: 0;
+  border: transparent;
+  background-color: transparent;
+  cursor: pointer;
+  @include mq(mobile-only) {
+    width: calc((26 / 1440) * 100vw);
+    height: calc((26 / 1440) * 100vw);
+  }
+
+  & img {
+    width: calc((45 / 1440) * 100vw);
+    height: calc((45 / 1440) * 100vw);
+  }
+}
+
+.formFieldImg {
+  // position: absolute;
+  // top: 8px;
+  // right: 11px;
+  @include mq(mobile-only) {
+    width: calc((26 / 1440) * 100vw);
+    height: calc((26 / 1440) * 100vw);
+  }
+}
+
+.formButton {
+  &--top {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: calc((40 / 1440) * 100vw);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc((250 / 1440) * 100vw);
+    height: calc((86 / 1440) * 100vw);
+    border: calc((2 / 1440) * 100vw) solid #46baa4;
+    box-shadow: 0px calc((4 / 1440) * 100vw) calc((5 / 1440) * 100vw)
+      calc((5 / 1440) * 100vw) rgba(0, 0, 0, 0.25);
+    border-radius: calc((15 / 1440) * 100vw);
+    background-color: transparent;
+    font-weight: 700;
+    font-size: calc((35 / 1440) * 100vw);
+    line-height: 1.2;
+    color: var(--primary-text-color);
+    &:hover {
+      cursor: pointer;
+      background-color: rgba(0, 0, 0, 0.4);
+      transition-property: background-color;
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &:first-child {
+      background-color: aliceblue;
+    }
+    @include mq(mobile-only) {
+      margin-top: calc((10 / 460) * 100vw);
+      width: calc((200 / 460) * 100vw);
+      height: calc((66 / 460) * 100vw);
+      border: calc((2 / 460) * 100vw) solid #46baa4;
+      box-shadow: 0px calc((4 / 460) * 100vw) calc((5 / 460) * 100vw)
+        calc((5 / 460) * 100vw) rgba(0, 0, 0, 0.25);
+      border-radius: calc((15 / 460) * 100vw);
+      font-size: calc((26 / 460) * 100vw);
+    }
+  }
+
+  // &--bottom {
+  //   margin-left: auto;
+  //   margin-right: auto;
+  //   margin-top: calc((93 / 1440) * 100vw);
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   width: calc((250 / 1440) * 100vw);
+  //   height: calc((86 / 1440) * 100vw);
+  //   border: 2px solid #46baa4;
+  //   box-shadow: 0px 4px 5px 5px rgba(0, 0, 0, 0.25);
+  //   border-radius: 15px;
+  //   background-color: transparent;
+  //   font-weight: 700;
+  //   font-size: calc((35 / 1440) * 100vw);
+  //   line-height: 1.2;
+  //   color: var(--primary-text-color);
+  //   &:hover {
+  //     cursor: pointer;
+  //     background-color: rgba(0, 0, 0, 0.4);
+  //     transition-property: background-color;
+  //     transition-duration: 250ms;
+  //     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  //   }
+
+  //   &:first-child {
+  //     background-color: aliceblue;
+  //   }
+  // }
+}
+
+.formInfo {
+  //   margin-top: 15px;
+  @include regularFont();
+  font-size: calc((20 / 1440) * 100vw);
+  color: white;
+  @include mq(mobile-only) {
+    font-size: calc((12 / 460) * 100vw);
+  }
+}
+
+.formInfoPrivate {
+  display: flex;
+  align-items: center;
+  margin-top: calc((20 / 1440) * 100vw);
+  @include regularFont();
+  font-size: calc((25 / 1440) * 100vw);
+  color: white;
+  position: relative;
+  @include mq(mobile-only) {
+    font-size: calc((18 / 1440) * 100vw);
+  }
+}
+
+.svg {
+  width: calc((45 / 1440) * 100vw);
+  height: calc((45 / 1440) * 100vw);
+}
