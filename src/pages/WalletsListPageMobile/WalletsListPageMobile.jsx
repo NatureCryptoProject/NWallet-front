@@ -21,7 +21,7 @@ const WalletsListPageMobile = ({ wallets, handleSelectWallet }) => {
           className={s.headerButton}
           type="button"
         >
-          NEW WALLET
+          ADD WALLET
         </Link>
         <button
           onClick={() => {

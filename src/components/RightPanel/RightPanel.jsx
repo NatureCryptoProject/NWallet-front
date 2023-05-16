@@ -1,5 +1,5 @@
 import s from "./rightPanel.module.scss";
-// import { useEffect } from "react";
+import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { HandySvg } from "handy-svg";
 import { useDispatch } from "react-redux";
@@ -24,6 +24,7 @@ const RightPanel = ({
   adress,
   // scrollHandler,
 }) => {
+  const [isShown, setIsShown] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -32,7 +33,7 @@ const RightPanel = ({
   // };
 
   // console.log(id);
-  // console.log(adress);
+  // console.log(isShown);
   return (
     <div className={leftPanelIsOpen ? s.rightPanelSided : s.rightPanel}>
       <button onClick={() => navigate(-1)} className={s.arrowLeftIcon}>
@@ -62,8 +63,18 @@ const RightPanel = ({
           width="50"
           height="50"
         />
-        <h2 className={s.rightPanelHeading}>
-          {walletName ? walletName : `PLEASE SELECT A WALLET`}
+        <h2
+          className={s.rightPanelHeading}
+          onMouseEnter={() => setIsShown(true)}
+          onMouseLeave={() => setIsShown(false)}
+        >
+          {walletName
+            ? isShown
+              ? `${walletName}`
+              : `${walletName.substring(0, 8)}${
+                  walletName.length > 8 ? "..." : ""
+                }`
+            : `PLEASE SELECT A WALLET`}
         </h2>
         <Link
           className={s.walletIcoWrapper}
