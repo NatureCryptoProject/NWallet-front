@@ -11,10 +11,12 @@ import { HandySvg } from "handy-svg";
 import homeIcon from "../../assets/images/home.svg";
 import arrowLeftIcon from "../../assets/images/arrow-left.svg";
 import { updateWallet } from "../../redux/wallets/wallets-operations";
+import { useState } from "react";
 
 import { deleteWallet } from "../../redux/wallets/wallets-operations";
 import { Confirm } from "notiflix/build/notiflix-confirm-aio";
 const WalletDetails = () => {
+  const [windowSize, setWindowSize] = useState(window.innerWidth); // eslint-disable-next-line
   const wallets = useSelector(getAllWallets);
   const dispatch = useDispatch();
   const params = useParams();
@@ -28,6 +30,18 @@ const WalletDetails = () => {
       navigate("/");
     }
     return; // eslint-disable-next-line
+  }, []);
+
+  const resizeHandler = () => {
+    setWindowSize(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", resizeHandler);
+    resizeHandler();
+    return () => {
+      window.removeEventListener("resize", resizeHandler);
+    }; // eslint-disable-next-line
   }, []);
 
   return (
@@ -81,31 +95,36 @@ const WalletDetails = () => {
                 placeholder="New Wallet Name"
                 type="text"
               />
-              <button
-                onClick={() => {
-                  Confirm.show(
-                    "Delete wallet",
-                    `Are you sure You want to delete wallet "${wallet?.walletName}"?`,
-                    "Yes",
-                    "No",
-                    () => {
-                      dispatch(deleteWallet(params.id)).then(() => {
-                        navigate("/");
-                      });
-                      console.log("Dispath delete");
-                    },
-                    () => {
-                      console.log("don`t delete");
-                    },
-                    {}
-                  );
-                  // dispatch(getWalletsTransactions(adress));
-                }}
-                className={s["formButton--top"]}
-                type="button"
-              >
-                DELETE
-              </button>
+              {windowSize < 768 ? (
+                <button
+                  onClick={() => {
+                    Confirm.show(
+                      "Delete wallet",
+                      `Are you sure You want to delete wallet "${wallet?.walletName}"?`,
+                      "Yes",
+                      "No",
+                      () => {
+                        dispatch(deleteWallet(params.id)).then(() => {
+                          navigate("/");
+                        });
+                        console.log("Dispath delete");
+                      },
+                      () => {
+                        console.log("don`t delete");
+                      },
+                      {}
+                    );
+                    // dispatch(getWalletsTransactions(adress));
+                  }}
+                  className={s["formButton--top"]}
+                  type="button"
+                >
+                  DELETE
+                </button>
+              ) : (
+                ""
+              )}
+
               <button className={s["formButton--bottom"]} type="submit">
                 OK
               </button>
