@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import s from "./leftPanel.module.scss";
 import WalletsList from "./WalletsList/WalletsList";
 import { BallTriangle } from "react-loader-spinner";

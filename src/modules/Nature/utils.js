@@ -95,7 +95,7 @@ export class Crypto {
 }
 
 const Net = require("net");
-
+// eslint-disable-next-line
 class Nature {
   /*
    * @param {string} host - Address of the node. Example: `127.0.0.1`
