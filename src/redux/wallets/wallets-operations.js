@@ -55,7 +55,7 @@ export const getWalletsTransactions = createAsyncThunk(
   async (data, thunkApi) => {
     try {
       const transactions = await WalletsService.getWalletsTransactions({
-        adress: data.adress,
+        adress: data.adress ?? data,
         offset: data.offset,
         limit: data.limit,
       });
