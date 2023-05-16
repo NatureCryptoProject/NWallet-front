@@ -1,5 +1,6 @@
 @import "../../../../assets/sass/mixins";
 .listItemText {
+  // text-align: center;
   @include regularFont();
   color: #a5a5a5;
   font-size: calc((18 / 1440) * 100vw);
@@ -7,7 +8,7 @@
   transition-duration: 100ms;
   transition-timing-function: var(--time-function);
   &:nth-child(2n) {
-    margin-left: calc((15 / 1440) * 100vw);
+    // margin-left: calc((15 / 1440) * 100vw);
     float: left;
   }
   @include mq(mobile-only) {
@@ -23,7 +24,7 @@
   transition-duration: 100ms;
   transition-timing-function: var(--time-function);
   &:nth-child(2n) {
-    margin-left: calc((15 / 1440) * 100vw);
+    // margin-left: calc((15 / 1440) * 100vw);
     float: left;
   }
   @include mq(mobile-only) {
@@ -116,6 +117,9 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  @include mq(mobile-only) {
+    margin-left: calc((13 / 460) * 100vw);
+  }
 }
 
 .walletInfoWrapper {
