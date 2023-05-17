@@ -1,5 +1,5 @@
 import s from "./rightPanel.module.scss";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { HandySvg } from "handy-svg";
 import { useDispatch } from "react-redux";
@@ -25,8 +25,21 @@ const RightPanel = ({
   // scrollHandler,
 }) => {
   const [isShown, setIsShown] = useState(false);
+  const [windowSize, setWindowSize] = useState(window.innerWidth); // eslint-disable-next-line
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const resizeHandler = () => {
+    setWindowSize(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", resizeHandler);
+    resizeHandler();
+    return () => {
+      window.removeEventListener("resize", resizeHandler);
+    };
+  }, []);
 
   // const scrollHandler = (e) => {
   //   console.log("scroll");
@@ -65,27 +78,44 @@ const RightPanel = ({
         />
         <h2
           className={s.rightPanelHeading}
-          onMouseEnter={() => setIsShown(true)}
-          onMouseLeave={() => setIsShown(false)}
+          onClick={() => setIsShown(!isShown)}
         >
-          {walletName
-            ? isShown
-              ? `${walletName}`
-              : `${walletName.substring(0, 8)}${
-                  walletName.length > 8 ? "..." : ""
-                }`
+          {windowSize < 768
+            ? walletName
+              ? isShown
+                ? // <p className={s.fullWalletTitle}>{walletName}</p>
+                  `${walletName}`
+                : `${walletName.substring(0, 8)}${
+                    walletName.length > 8 ? "..." : ""
+                  }`
+              : `PLEASE SELECT A WALLET`
+            : walletName
+            ? `${walletName}`
             : `PLEASE SELECT A WALLET`}
         </h2>
         <Link
           className={s.walletIcoWrapper}
           to={walletName ? `/wallet-details/${id}` : "#"}
         >
-          <HandySvg
-            className={s.walletIco}
-            src={walletIcon}
-            width="50"
-            height="50"
-          />
+          {windowSize < 768 ? (
+            isShown ? (
+              ""
+            ) : (
+              <HandySvg
+                className={s.walletIco}
+                src={walletIcon}
+                width="50"
+                height="50"
+              />
+            )
+          ) : (
+            <HandySvg
+              className={s.walletIco}
+              src={walletIcon}
+              width="50"
+              height="50"
+            />
+          )}
         </Link>
 
         {adress ? (
