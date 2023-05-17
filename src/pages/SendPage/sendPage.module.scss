@@ -30,7 +30,7 @@
   padding-top: calc((95 / 1440) * 100vw);
   padding-bottom: calc((45 / 1440) * 100vw);
   padding-right: calc((10 / 1440) * 100vw);
-  padding-left: calc((60 / 1440) * 100vw);
+  padding-left: calc((10 / 1440) * 100vw);
   @include mq(mobile-only) {
     height: calc((440 / 460) * 100vw);
     padding-top: calc((100 / 460) * 100vw);

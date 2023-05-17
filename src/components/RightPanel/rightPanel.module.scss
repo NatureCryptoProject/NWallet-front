@@ -101,6 +101,12 @@
   }
 }
 
+// .fullWalletTitle {
+//   position: absolute;
+//   top: calc((20 / 460) * 100vw);
+//   left: 0;
+// }
+
 .rightPanelHeading {
   @include boldFont();
   font-size: calc((32 / 1440) * 100vw);
