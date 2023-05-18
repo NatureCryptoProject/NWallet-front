@@ -60,9 +60,10 @@ const WalletsListItem = ({
             })
           );
           navigate(`/${id}`);
+        } else {
+          handleOpenLeftPanel();
         }
         handleSelectWallet(id);
-        handleOpenLeftPanel();
       }}
       className={isSelected ? s.listItemSelected : s.listItem}
     >
