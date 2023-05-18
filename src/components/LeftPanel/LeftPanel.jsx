@@ -14,6 +14,7 @@ const LeftPanel = ({
   wallets,
   handleSelectWallet,
   leftPanelIsOpen,
+  handleOpenLeftPanel,
 }) => {
   return (
     <div className={leftPanelIsOpen ? s.leftPanel : s.leftPanelHidden}>
@@ -34,6 +35,7 @@ const LeftPanel = ({
         <WalletsList
           wallets={wallets}
           handleSelectWallet={handleSelectWallet}
+          handleOpenLeftPanel={handleOpenLeftPanel}
         />
       )}
     </div>

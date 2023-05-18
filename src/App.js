@@ -83,7 +83,12 @@ function App() {
             <Route element={<RequireAuth />}>
               <Route
                 index
-                element={<MainPageDesktop leftPanelIsOpen={leftPanelIsOpen} />}
+                element={
+                  <MainPageDesktop
+                    leftPanelIsOpen={leftPanelIsOpen}
+                    handleOpenLeftPanel={handleOpenLeftPanel}
+                  />
+                }
               />
               <Route path="add-wallet" element={<AddWalletPage />} />
               <Route path="new-wallet" element={<NewWalletPage />} />

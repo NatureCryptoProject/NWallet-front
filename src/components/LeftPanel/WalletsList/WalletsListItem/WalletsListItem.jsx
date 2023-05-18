@@ -13,6 +13,7 @@ const WalletsListItem = ({
   name,
   adress,
   amount,
+  handleOpenLeftPanel,
 }) => {
   const navigate = useNavigate();
   const pageWidth = window.innerWidth;
@@ -28,7 +29,6 @@ const WalletsListItem = ({
     }
   };
 
-  // console.log();
   const handleDirectionStringFormat = (adress) => {
     let formatedAdress = adress.split("");
     formatedAdress.splice(15, 45, "...");
@@ -62,6 +62,7 @@ const WalletsListItem = ({
           navigate(`/${id}`);
         }
         handleSelectWallet(id);
+        handleOpenLeftPanel();
       }}
       className={isSelected ? s.listItemSelected : s.listItem}
     >
