@@ -1,7 +1,7 @@
 import s from "./walletsList.module.scss";
 import WalletsListItem from "./WalletsListItem/WalletsListItem.jsx";
 
-const WalletsList = ({ handleSelectWallet, wallets }) => {
+const WalletsList = ({ handleSelectWallet, wallets, handleOpenLeftPanel }) => {
   return (
     <ul className={s.walletsList}>
       {wallets.length === 0 ? (
@@ -19,6 +19,7 @@ const WalletsList = ({ handleSelectWallet, wallets }) => {
               name={el.walletName}
               adress={el.walletAdress}
               amount={el.amount}
+              handleOpenLeftPanel={handleOpenLeftPanel}
             />
           );
         })

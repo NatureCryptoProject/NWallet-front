@@ -9,7 +9,8 @@ import {
 } from "../../redux/wallets/wallets-operations";
 import { Confirm } from "notiflix/build/notiflix-confirm-aio";
 
-import walletIcon from "../../assets/images/wallet-icon.svg";
+// import walletIcon from "../../assets/images/wallet-icon.svg";
+import penIcon from "../../assets/images/pen-icon.svg";
 import buttonSend from "../../assets/images/button-send.svg";
 import buttonRecive from "../../assets/images/button-recive.svg";
 import arrowLeftIcon from "../../assets/images/arrow-left.svg";
@@ -103,7 +104,7 @@ const RightPanel = ({
             ) : (
               <HandySvg
                 className={s.walletIco}
-                src={walletIcon}
+                src={penIcon}
                 width="50"
                 height="50"
               />
@@ -111,7 +112,7 @@ const RightPanel = ({
           ) : (
             <HandySvg
               className={s.walletIco}
-              src={walletIcon}
+              src={penIcon}
               width="50"
               height="50"
             />

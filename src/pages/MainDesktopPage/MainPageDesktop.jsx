@@ -16,7 +16,10 @@ import WalletsListPageMobile from "../WalletsListPageMobile/WalletsListPageMobil
 import s from "./mainPageDesktop.module.scss";
 // import _ from "lodash";
 
-export default function MainPageDesktop({ leftPanelIsOpen }) {
+export default function MainPageDesktop({
+  leftPanelIsOpen,
+  handleOpenLeftPanel,
+}) {
   const dispatch = useDispatch();
   const [selectedWallet, setSelectedWallet] = useState([]);
   const [walletData, setWalletData] = useState({});
@@ -26,8 +29,6 @@ export default function MainPageDesktop({ leftPanelIsOpen }) {
   const wallets = useSelector(getAllWallets);
   const transactions = useSelector(walletsTransactions);
   const isWalletsLoading = useSelector(getIsWalletsLoading);
-
-  // console.log(pagination);
 
   // console.log(wallets);
 
@@ -130,6 +131,7 @@ export default function MainPageDesktop({ leftPanelIsOpen }) {
             wallets={selectedWallet.length > 0 ? selectedWallet : wallets}
             handleSelectWallet={handleSelectWallet}
             leftPanelIsOpen={leftPanelIsOpen}
+            handleOpenLeftPanel={handleOpenLeftPanel}
           />
           <section className={s.section}>
             {walletData._id ? (
