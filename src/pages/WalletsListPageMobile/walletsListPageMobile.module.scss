@@ -19,7 +19,8 @@
   margin-right: auto;
   margin-top: calc((30 / 460) * 100vw);
   width: calc((420 / 460) * 100vw);
-  height: calc((270 / 460) * 100vw);
+  // height: calc((270 / 460) * 100vw); //================
+  height: calc(100% - calc((192 / 460) * 100vw));
   // max-width: 420px;
   border-radius: calc((10 / 460) * 100vw);
   // height: 270px;
