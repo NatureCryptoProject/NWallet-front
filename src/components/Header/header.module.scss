@@ -86,7 +86,8 @@
   border-radius: calc((15 / 1440) * 100vw);
   background-color: transparent;
   font-weight: 700;
-  font-size: calc((32 / 1440) * 100vw);
+  // font-size: calc((32 / 1440) * 100vw);
+  font-size: 2vw;
   line-height: 1.2;
   color: var(--primary-text-color);
   &:hover {
