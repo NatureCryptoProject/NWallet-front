@@ -18,7 +18,8 @@
 
   @include mq(mobile-only) {
     height: auto;
-    height: calc((270 / 460) * 100vw);
+    // height: calc(100% - calc((192 / 460) * 100vw));
+    height: 100%;
   }
 }
 
