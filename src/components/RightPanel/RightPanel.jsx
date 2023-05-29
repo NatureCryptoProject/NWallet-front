@@ -48,6 +48,19 @@ const RightPanel = ({
 
   // console.log(id);
   // console.log(isShown);
+  if (windowSize > 768) {
+    Confirm.merge({
+      width: "calc((300 / 1440) * 100vw)",
+      distance: "calc((10 / 1440) * 100vw)",
+      borderRadius: "calc((25 / 1440) * 100vw)",
+      titleFontSize: "calc((16 / 1440) * 100vw)",
+      messageFontSize: "calc((14 / 1440) * 100vw)",
+      buttonsFontSize: "calc((15 / 1440) * 100vw)",
+      buttonsMaxLength: 34,
+      // buttonsMaxLength: "calc((16 / 1440) * 100vw)",
+    });
+  }
+
   return (
     <div className={leftPanelIsOpen ? s.rightPanelSided : s.rightPanel}>
       <button onClick={() => navigate(-1)} className={s.arrowLeftIcon}>
