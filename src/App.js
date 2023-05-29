@@ -11,6 +11,7 @@ import RecivePage from "./pages/RecivePage";
 import RegisterPage from "./pages/RegisterPage";
 import SendPage from "./pages/SendPage";
 import NotFoundPage from "./pages/NotFoundPage";
+import BrokenServicePage from "./pages/BrokenServicePage/BrokenServicePage";
 import WalletInfoPageMobile from "./pages/WalletInfoPageMobile";
 import WalletDetails from "./pages/WalletDetails/WalletDetails";
 // import Scaner from "./pages/Scaner/Scaner";
@@ -103,6 +104,7 @@ function App() {
               {/* <Route path="/scaner" element={<Scaner />} /> */}
             </Route>
             <Route path="*" element={<NotFoundPage />} />
+            <Route path="/broken" element={<BrokenServicePage />} />
           </Route>
         </Routes>
       )}

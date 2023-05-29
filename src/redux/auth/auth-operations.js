@@ -13,8 +13,13 @@ export const signup = createAsyncThunk(
       localStorage.setItem("token", data.accessToken);
       return data;
     } catch (error) {
-      Notify.failure(error.response?.data?.message);
-      return thunkApi.rejectWithValue(error.response?.data?.message);
+      if (error.code === "ERR_NETWORK") {
+        window.location.replace("https://nwallet.nproject.charity/broken");
+        return thunkApi.rejectWithValue(error.response?.data?.message);
+      } else {
+        Notify.failure(error.response?.data?.message);
+        return thunkApi.rejectWithValue(error.response?.data?.message);
+      }
     }
   }
 );
@@ -27,8 +32,13 @@ export const login = createAsyncThunk(
       localStorage.setItem("token", data.accessToken);
       return data;
     } catch (error) {
-      Notify.failure(error.response?.data?.message);
-      return thunkApi.rejectWithValue(error.response?.data?.message);
+      if (error.code === "ERR_NETWORK") {
+        window.location.replace("https://nwallet.nproject.charity/broken");
+        return thunkApi.rejectWithValue(error.response?.data?.message);
+      } else {
+        Notify.failure(error.response?.data?.message);
+        return thunkApi.rejectWithValue(error.response?.data?.message);
+      }
     }
   }
 );
